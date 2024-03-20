@@ -1,0 +1,13 @@
+version: '3'
+services:
+  unbound:
+    image: "techblog/unbound-dns"
+    container_name: unbound_dns
+    hostname: "unbound"
+    restart: unless-stopped
+    ports:
+      - "5335:53/tcp"
+      - "5335:53/udp"
+    volumes:
+      - ./unbound/custom_unbound.sh:/unbound.sh:ro
+      - ./unbound/root.hints:/opt/unbound/etc/unbound/var/root.hints:ro
