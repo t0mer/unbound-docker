@@ -6,8 +6,8 @@ services:
     hostname: "unbound"
     restart: unless-stopped
     ports:
-      - "5335:53/tcp"
-      - "5335:53/udp"
+      - "5353:53/tcp"
+      - "5353:53/udp"
     volumes:
       - ./custom_unbound.sh:/unbound.sh:ro
-      - ./root.hints:/opt/unbound/etc/unbound/var/root.hints:ro
+      - ./root.hints:/var/root.hints:ro
