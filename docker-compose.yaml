@@ -9,5 +9,5 @@ services:
       - "5335:53/tcp"
       - "5335:53/udp"
     volumes:
-      - ./unbound/custom_unbound.sh:/unbound.sh:ro
-      - ./unbound/root.hints:/opt/unbound/etc/unbound/var/root.hints:ro
+      - ./custom_unbound.sh:/unbound.sh:ro
+      - ./root.hints:/opt/unbound/etc/unbound/var/root.hints:ro
