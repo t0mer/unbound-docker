@@ -10,4 +10,4 @@ services:
       - "5353:53/udp"
     volumes:
       - ./custom_unbound.sh:/unbound.sh:ro
-      - ./root.hints:/var/root.hints:ro
+      - ./root.hints:/opt/unbound/etc/unbound/var/root.hints:ro
